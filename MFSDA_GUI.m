@@ -84,10 +84,6 @@ im=imread('/logo/BIGS2-LOGO.png');
 handles.h1 = image(im,'Parent',handles.axes1);
 set(handles.axes1,'Visible','off')
 
-% im=imread('BIGS2-LOGO2.png');
-% handles.h2 = image(im,'Parent',handles.axes2);
-% set(handles.axes1,'Visible','off')
-
 % Update handles structure
 guidata(hObject, handles);
 % UIWAIT makes figure1 wait for user response (see UIRESUME)
