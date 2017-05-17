@@ -80,7 +80,7 @@ handles.output = hObject;
 
 set(hObject, 'Name','MFSDA for Windows (64-bit) V1.0');
 
-im=imread('/logo/BIGS2-LOGO.png');
+im=imread('./logo/BIGS2-LOGO.png');
 handles.h1 = image(im,'Parent',handles.axes1);
 set(handles.axes1,'Visible','off')
 
