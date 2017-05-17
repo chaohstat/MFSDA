@@ -10,3 +10,11 @@ This toolbox is written in a user-friendly GUI interface. Here are some explaina
 1. Load raw data
 
 In this panel, you need to select (a). the folder where coordinate data (template file, vtk format) is stored; (b). the file containing the covariate matrix (could be either txt format or mat format); (c). the file indicating which covariates you are interested in the statistical analysis (could be either txt format or mat format); (d). the file indicating which covariates are continuous (1 is continuous and 0 otherwise, could be either txt format or mat format); (e). the folder where shape dataset (vtk format) is stored
+
+2. Clear & Run
+
+In this panel, you need to select the folder where to save all  the output files. The 'Clear' button help you to clear all the preselcted input information, and the 'Run' button is clicked when all the input information is selected and the analysis is ready to go.
+
+3. Export Results
+
+In this panel, you can plot the results you are interested in. 
