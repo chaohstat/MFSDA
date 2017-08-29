@@ -40,7 +40,7 @@ for dii=1:d   % go through all dimension
     Tmat0(:,:,dii+1)=Coord(:,dii)*ones(1,L)-ones(L,1)*Coord(:,dii)';
 end
 
-PX0=(Xdesign'*Xdesign)\Xdesign';    %  'hat' matrix
+PX0=(Xdesign'*Xdesign+eye(size(Xdesign,2))*0.00001)\Xdesign';    %  'hat' matrix
 
 for mii=1:m  % go through all features
     

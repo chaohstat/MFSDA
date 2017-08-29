@@ -42,11 +42,11 @@ for ii=1:nn
         error('Only able to read VTK images saved as BINARY or ASCII, not %s', formatStr);
     end
     kindStr = fgets(fid); % kind, e.g. "DATASET POLYDATA" or "DATASET STRUCTURED_ POINTS"
-    if isempty(strfind(upper(kindStr),'POLYDATA'))
+    if ~contains(upper(kindStr),'POLYDATA')
         error('Only able to read VTK images saved as POLYDATA, not %s', kindStr);
     end
     vertStr = fgets(fid); % number of vertices, e.g. "POINTS 685462 float"
-    if isempty(strfind(upper(vertStr),'POINTS'))
+    if ~contains(upper(vertStr),'POINTS')
         error('Expected header to report "POINTS", not %s', vertStr);
     end
     nvert = sscanf(vertStr,'%*s %d %*s', 1);
@@ -62,7 +62,7 @@ for ii=1:nn
         end
         A = reshape(A, 3, cnt/3);
         vertex_ii = A;
-    end;
+    end
     % read polygons
     str = fgets(fid); %e.g. "POLYGONS 6 30"
     info = sscanf(str,'%c %*s %*s', 1);
